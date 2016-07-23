@@ -10,7 +10,6 @@
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
         </properties>
-        <class>models.WishCard</class>
     </persistence-unit>
 
 </persistence>

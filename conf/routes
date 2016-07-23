@@ -12,13 +12,35 @@ GET     /message                    controllers.AsyncController.message
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-# WishCardController
-# create wish card
-POST    /wishcard/create             controllers.WishCardController.createWishCard()
-# delete wish card
-POST    /wishcard/:id/delete         controllers.WishCardController.deleteWishCard(id: Integer)
-# query wish card
-GET     /wishcard/read               controllers.WishCardController.readWishCard()
-# update wish card
-POST    /wishcard/:id/update         controllers.WishCardController.updateWishCard(id: Integer)
 
+# create wish card
+POST    /card/create                controllers.CardController.createCard()
+# delete wish card
+DELETE  /card/delete/:id            controllers.CardController.deleteCard(id: Integer)
+# query wish card
+GET     /card/                      controllers.CardController.getAllCards()
+GET     /card/:id                   controllers.CardController.getCardWithId(id: Integer)
+# update wish card
+PUT     /card/update                controllers.CardController.updateCard()
+
+
+# create person
+POST    /person/create              controllers.PersonController.createPerson()
+# delete person
+DELETE  /person/delete/:id          controllers.PersonController.deletePerson(id: Integer)
+# query person
+GET     /person/                    controllers.PersonController.getAllPersons()
+GET     /person/:id                 controllers.PersonController.getPersonWithId(id: Integer)
+# update person
+PUT     /person/update              controllers.PersonController.updatePerson()
+
+
+# create task
+POST    /task/create              controllers.TaskController.createTask()
+# delete task
+DELETE  /task/delete/:id          controllers.TaskController.deleteTask(id: Integer)
+# query task
+GET     /task/                    controllers.TaskController.getAllTasks()
+GET     /task/:id                 controllers.TaskController.getTaskWithId(id: Integer)
+# update task
+PUT     /task/update              controllers.TaskController.updateTask()
